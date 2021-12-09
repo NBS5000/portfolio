@@ -37,13 +37,14 @@ menu{
     padding: 3px 20px;
     border-radius: 10px;
     color: var(--baseColor);
-    transition: 0.5s;
+    transition: 0.3s;
     position: relative;
     text-align: center;
 }
 .menu a{
     color: var(--baseColor);
-    transition: 0.5s;
+    text-shadow: 1px 1px  var(--baseAlpha);
+    transition: 0.3s;
     position: relative;
     text-align: center;
 }
@@ -84,6 +85,7 @@ menu{
 .subMenuLink, .myCodeLink, .menu a{
     font-weight: lighter;
     color: var(--baseColor);
+    text-shadow: 1px 1px  var(--baseAlpha);
     transition: 0.2s ease-in;
 
     width: 100%;

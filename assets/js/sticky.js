@@ -11,7 +11,8 @@ function scrollFunction() {
 
     if (top > cutoff || top > cutoff) {
         ele.style.fontSize = "20px";
-        ele.style.height = "50%";
+        ele.style.height = "60%";
+        ele.style.textShadow = "text-shadow: 5px 5px  rgba(50,95,50,0.2);";
     } else {
         ele.style.fontSize = "200%";
         ele.style.height = "100%";

@@ -17,9 +17,13 @@ body{
     padding-top: 1.2%;
     height: 100%;
     width: 100%;
+    
     background-color: rgba(0, 0, 0, 0.2);
     z-index: 1;
-    }
+}
+#titleName:hover{
+    background-color: rgba(0, 0, 0, 1);
+}
 img{
     position: relative;
 }
@@ -37,7 +41,6 @@ a{
     display: table;
 }
 header{
-
     /* background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0)); */
     position: fixed;
     width: 100%;
@@ -46,6 +49,7 @@ header{
     vertical-align: middle;
     z-index: 1;
 }
+
 
 #banner{
     width: 100%;
@@ -66,6 +70,8 @@ header{
     flex-direction: row;
     position: relative;
     text-align: justify;
+    margin-bottom: 20px;
+    /* width: 100%; */
 }
 .mainRight{
     float: right;
@@ -74,6 +80,8 @@ header{
     flex-direction: row-reverse;
     position: relative;
     text-align: justify;
+    margin-bottom: 20px;
+    /* width: 100%; */
 }
 .leftWords, .rightWords{
     width: 60%;
@@ -83,14 +91,14 @@ header{
     position: relative;
     flex-direction: column;
     margin: auto 5%;
+    text-align: justify;
 }
 .leftWords h3 {
     line-height: 250%;
     font-size: 150%;
     font-style:italic;
 }
-.leftWords p{
-}
+
 .rightWords h3{
     text-align: right;
     line-height: 250%;
@@ -101,6 +109,9 @@ header{
     float: left;
     position: relative;
     width:250px;
+}
+#me{
+    height: 330px;
 }
 .mainContent img{
     border-radius: 10px;
@@ -130,22 +141,68 @@ footer{
     text-decoration: none;
 }
 
-footer ul li, footer p{
+footer ul li, footer p, footer a{
+    color: var(--baseColor);
+    text-shadow: 1px 1px  var(--baseAlpha);
 
     margin: 0 50px;
     display: inline-block;
     font-size: 75%;
 }
 
-.display{
+.displayCode{
     width: 100%;
-    display: inline-flex;
+    display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    align-self: center;
+    margin: 0;
 }
 .codepen{
-    width: 45%;
+    align-self: center;
+    margin: 0;
 }
 /* #bb8, #saber{
     margin-right: 50px;
 } */
+
+/* @media screen and (max-width:1060px) {
+    .leftWords, .rightWords{
+        width: 100%;
+    }
+} */
+@media screen and (max-width:1060px) and (min-width:800px) {
+    .leftWords, .rightWords{
+        width: 50%;
+    }
+}
+@media screen and (max-width:800px) and (min-width:650px) {
+    .leftWords, .rightWords{
+        width: 40%;
+    }
+    #me, #html{
+        margin:auto 0;
+    }
+}
+@media screen and (max-width:650px) {
+    .leftWords, .rightWords{
+        width: 100%;
+    }
+    #me, #html, .leftWords, .rightWords, #css{
+        margin:0 auto;
+    }
+    #h1{
+        visibility: hidden;
+        /* content: "";
+        position: relative; */
+    }
+    #h1{
+        /* content: "SB"; */
+        /* position: absolute;
+        top: 0;
+        left: 0; */
+    }
+
+}
