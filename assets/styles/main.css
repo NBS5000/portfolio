@@ -49,8 +49,6 @@ header{
     vertical-align: middle;
     z-index: 1;
 }
-
-
 #banner{
     width: 100%;
     background: linear-gradient(bottom, black,rgba(255,255,255,1));
@@ -93,17 +91,13 @@ header{
     margin: auto 5%;
     text-align: justify;
 }
-.leftWords h3 {
+.leftWords h3, .rightWords h3 {
     line-height: 250%;
     font-size: 150%;
     font-style:italic;
 }
-
 .rightWords h3{
     text-align: right;
-    line-height: 250%;
-    font-size: 150%;
-    font-style:italic;
 }
 #me, #css{
     float: left;
@@ -117,7 +111,7 @@ header{
     border-radius: 10px;
     box-shadow: 5px 5px 15px grey;
 }
-#html{
+#html, #js{
     float: right;
     position: relative;
     width:250px;
@@ -127,9 +121,15 @@ header{
     padding: 0 60px;
     height:150px;
 }
+#cricket{
+    height: 227px;
+    width: 227px;
+    border: none;
+    align-self: center;
+    margin: 0 auto;
+}
 footer{
     position: relative;
-    bottom: 0;
     margin-top: 5%;
     width: 100%;
     height:50px;
@@ -140,11 +140,14 @@ footer{
     text-shadow: 1px 2px var(--baseAlpha);
     text-decoration: none;
 }
-
+.recommend p{
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 15px;
+}
 footer ul li, footer p, footer a{
     color: var(--baseColor);
     text-shadow: 1px 1px  var(--baseAlpha);
-
     margin: 0 50px;
     display: inline-block;
     font-size: 75%;
@@ -168,8 +171,3 @@ footer ul li, footer p, footer a{
     margin-right: 50px;
 } */
 
-/* @media screen and (max-width:1060px) {
-    .leftWords, .rightWords{
-        width: 100%;
-    }
-} */

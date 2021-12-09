@@ -23,7 +23,7 @@ media css file
     .leftWords, .rightWords{
         width: 100%;
     }
-    #me, #html, .leftWords, .rightWords, #css{
+    #me, #html, .leftWords, .rightWords, #css, #js, .recommend{
         margin:0 auto;
     }
     h1{
