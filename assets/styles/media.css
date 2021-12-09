@@ -23,8 +23,9 @@ media css file
     .leftWords, .rightWords{
         width: 100%;
     }
-    #me, #html, .leftWords, .rightWords, #css, #js, .recommend{
+    #me, #html, .leftWords, .rightWords, #css, #js, .recommend, .mainRight, .mainLeft{
         margin:0 auto;
+        text-align: justify;
     }
     h1{
         visibility: hidden;
