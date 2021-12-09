@@ -24,56 +24,64 @@ function result (val1,val2,val3,val4){
     console.log(num);
 }
 function cricket (){
-    var player, score, target, hit, prefill;
-    //generate target
-    target = Math.floor(Math.random() * 20) + 10;
-    score = 0;
-    prefill = "Enter name";
+    var playing = true;
+    while(playing == true){
+            
+        var player, score, target, hit, prefill;
+        //generate target
+        target = Math.floor(Math.random() * 20) + 10;
+        score = 0;
+        prefill = "Enter name";
 
-    //Ask for the player name
-    player = prompt("This has been a shocking innings! The home team has lost 9 wickets and scored 0 runs in their chase of " + target + ".\n(To play, select a number 1, 2, 3, 4, or 6)\n\nUp next is...", prefill)
-    //end if cancelled or no name entered
-    if(!player || player == prefill)
-    throw("bye bye!");
+        //Ask for the player name
+        if (!player)
+            player = prompt("This has been a shocking innings! The home team has lost 9 wickets and scored 0 runs in their chase of " + target + ".\n(To play, select a number 1, 2, 3, 4, or 6)\n\nUp next is...", prefill)
+        //end if cancelled or no name entered
+        if(!player || player == prefill)
+            throw("bye bye!");
 
-    //The only shots available....otherwise it's just not cricket!!
-    hit = ["1","2","3","4","6"]
-    var balls = 0;
+        //The only shots available....otherwise it's just not cricket!!
+        hit = ["1","2","3","4","6"]
+        var balls = 0;
 
-    //while loop for playing the game, will continue until target is met or they are out
-    while( score <= target && score>= 0 )
-    {
-        //adjust chase to reflect current target
-        var chase = target - score;
-        balls = balls +1;
-        var shot;
-        //this is the delivery of the bowler, if the number matches the shot, the batsman is out and game over
-        var bowl = Math.floor(Math.random() * 6);
-        //shot selection
-        shot = prompt("The bowler comes in...\n(1,2,3,4,6) \n\nCurrently " + chase + " runs behind")
-        if(score < 0){
-            //error capture if something failed after being out
-            break;
-        }else if(hit.indexOf(shot) == -1){
-            //out if shot selected is anything other than permitted
-            result(target,score,player,balls);
-        }else if(shot == bowl){
-            //out if shot selected matches delivery
-            result(target,score,player,balls);
-        }else {
-            //if not out, add shot to score
-            score = parseInt(score) + parseInt(shot);
+        //while loop for playing the game, will continue until target is met or they are out
+        while( score <= target && score>= 0 )
+        {
+            //adjust chase to reflect current target
+            var chase = target - score;
+            balls = balls +1;
+            var shot;
+            //this is the delivery of the bowler, if the number matches the shot, the batsman is out and game over
+            var bowl = Math.floor(Math.random() * 6);
+            //shot selection
+            shot = prompt("The bowler comes in...\n(1,2,3,4,6) \n\nCurrently " + chase + " runs behind")
+            if(score < 0){
+                //error capture if something failed after being out
+                break;
+            }else if(hit.indexOf(shot) == -1){
+                //out if shot selected is anything other than permitted
+                result(target,score,player,balls);
+            }else if(shot == bowl){
+                //out if shot selected matches delivery
+                result(target,score,player,balls);
+            }else {
+                //if not out, add shot to score
+                score = parseInt(score) + parseInt(shot);
+            }
         }
-    }
 
-    //pass to other function to handle result display
-    result(target,score,player,balls);
-    //after result handled, re-adjust score if out
-    if(score < 0){
-        score = score + 1000;
+        //pass to other function to handle result display
+        result(target,score,player,balls);
+        //after result handled, re-adjust score if out
+        if(score < 0){
+            score = score + 1000;
+        }
+        //concat for log alert and console
+        var final = "Name: " + player + " - Target: " + target + " - Score: " + score;
+        alert(final);
+        console.log(final);
+        var repeat = confirm("Do you wish to play again?");
+        if (!repeat)
+            playing = false;
     }
-    //concat for log alert and console
-    var final = "Name: " + player + " - Target: " + target + " - Score: " + score;
-    alert(final);
-    console.log(final);
 }
