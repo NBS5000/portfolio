@@ -96,7 +96,7 @@ header{
     font-size: 150%;
     font-style:italic;
 }
-.rightWords h3{
+.rightWords h3, .rightWords p{
     text-align: right;
 }
 
