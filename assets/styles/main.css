@@ -193,16 +193,36 @@ footer ul li, footer p, footer a{
     #me, #html, .leftWords, .rightWords, #css{
         margin:0 auto;
     }
-    #h1{
+    h1{
         visibility: hidden;
-        /* content: "";
-        position: relative; */
     }
-    #h1{
-        /* content: "SB"; */
-        /* position: absolute;
+    h1:before{
+        content: "SB";
+        line-height: 200%;
+        visibility: visible;
+        left:50px;
+        background-color: rgba(0, 0, 0, 0.2);
+        z-index: 1;
+        position: absolute;
+        left: 0;
         top: 0;
-        left: 0; */
+        padding-left: 10%;
+        padding-top: 1.2%;
+        height: 100%;
+        width: 100%;
     }
-
+    h1:before:hover{
+        background-color: rgba(0, 0, 0, 1);
+    }
+    h3{
+        margin: 0 auto;
+    }
+    .menuLink{
+        margin: 1% 0;
+        padding: 3px 15px;
+    }
+    .menu{
+        right: 0;
+        align-content: right;
+    }
 }
