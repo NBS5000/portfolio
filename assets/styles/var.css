@@ -1,0 +1,12 @@
+/*
+Homework wk2
+Portfolio Start
+-Steve Barry-
+variable css file
+*/
+
+:root{
+    --baseColor: rgb(50,95,50);
+    --baseAlpha: rgba(50,95,50,0.3);
+
+}
